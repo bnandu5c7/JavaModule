@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">   
+   <bean id ="MyLotus"  class="com.kpit.Lotus" scope="prototype">
+     <constructor-arg index ="0" value="pink"></constructor-arg>
+     </bean>
+     <bean id ="MyLotus1"  class="com.kpit.Lotus" scope="prototype">
+     <constructor-arg index ="0" value="pink"></constructor-arg>
+     </bean>
+    <bean id ="MyLotus2"  class="com.kpit.Lotus" scope="prototype">
+     <constructor-arg index ="0" value="red"></constructor-arg>
+     </bean>
+     <bean id ="MyLotus3"  class="com.kpit.Lotus" scope="prototype">
+     <constructor-arg index ="0" value="white"></constructor-arg>
+     </bean>
+     <bean id ="MyCollege" class ="com.kpit.College">
+      <constructor-arg index ="0" value="mrcew"></constructor-arg>
+      <constructor-arg index ="1" value="hyd"></constructor-arg>
+    </bean>
+    <bean id ="MyHeadMaster" class ="com.kpit.HeadMaster">
+      <constructor-arg index ="0" value="shankar"></constructor-arg>
+      <constructor-arg index ="1" value="cse"></constructor-arg>
+      <constructor-arg index ="2" ref="MyCollege"></constructor-arg>
+    </bean>
+    <bean id ="MyTeacher" class ="com.kpit.Teacher">
+      <constructor-arg index ="0" value="shankara"></constructor-arg>
+      <constructor-arg index ="1" value="maths"></constructor-arg>
+      <constructor-arg index ="2" value="M"></constructor-arg>
+      <constructor-arg index ="3" value="45000"></constructor-arg>
+      <constructor-arg index ="4" ref="MyHeadMaster"></constructor-arg>
+    </bean>
+     <bean id ="MyStudent" class ="com.kpit.Student" >
+      <constructor-arg index ="0" value="shank"></constructor-arg>
+      <constructor-arg index ="1" value="8th class"></constructor-arg>
+      <constructor-arg index ="2" ref="MyTeacher"></constructor-arg>
+    </bean>
+
+	
+
+	
+</beans>
